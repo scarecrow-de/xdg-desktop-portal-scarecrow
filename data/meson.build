@@ -22,40 +22,40 @@ gnome_dbus_interfaces = files(
   'io.github.scarecrow_de.ScreenSaver.xml',
 )
 
-gtk_portal = configuration_data()
+scarecrow_portal = configuration_data()
 
 if get_option('wallpaper').allowed()
   portal_dbus_interfaces += desktop_portal_interfaces_dir / 'org.freedesktop.impl.portal.Wallpaper.xml'
-  gtk_portal.set('wallpaper_iface', 'org.freedesktop.impl.portal.Wallpaper;')
+  scarecrow_portal.set('wallpaper_iface', 'org.freedesktop.impl.portal.Wallpaper;')
 else
-  gtk_portal.set('wallpaper_iface', '')
+  scarecrow_portal.set('wallpaper_iface', '')
 endif
 
 if get_option('settings').allowed()
   portal_dbus_interfaces += desktop_portal_interfaces_dir / 'org.freedesktop.impl.portal.Settings.xml'
-  gtk_portal.set('settings_iface', 'org.freedesktop.impl.portal.Settings;')
+  scarecrow_portal.set('settings_iface', 'org.freedesktop.impl.portal.Settings;')
 else
-  gtk_portal.set('settings_iface', '')
+  scarecrow_portal.set('settings_iface', '')
 endif
 
 if get_option('appchooser').allowed()
   portal_dbus_interfaces += desktop_portal_interfaces_dir / 'org.freedesktop.impl.portal.AppChooser.xml'
-  gtk_portal.set('appchooser_iface', 'org.freedesktop.impl.portal.AppChooser;')
+  scarecrow_portal.set('appchooser_iface', 'org.freedesktop.impl.portal.AppChooser;')
 else
-  gtk_portal.set('appchooser_iface', '')
+  scarecrow_portal.set('appchooser_iface', '')
 endif
 
 if get_option('lockdown').allowed()
   portal_dbus_interfaces += desktop_portal_interfaces_dir / 'org.freedesktop.impl.portal.Lockdown.xml'
-  gtk_portal.set('lockdown_iface', 'org.freedesktop.impl.portal.Lockdown;')
+  scarecrow_portal.set('lockdown_iface', 'org.freedesktop.impl.portal.Lockdown;')
 else
-  gtk_portal.set('lockdown_iface', '')
+  scarecrow_portal.set('lockdown_iface', '')
 endif
 
 configure_file(
   input: 'scarecrow.portal.in',
   output: 'scarecrow.portal',
-  configuration: gtk_portal,
+  configuration: scarecrow_portal,
   install: true,
   install_dir: datadir / 'xdg-desktop-portal/portals',
 )
