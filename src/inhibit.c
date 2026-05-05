@@ -22,8 +22,8 @@ enum {
 };
 
 static GDBusInterfaceSkeleton *inhibit;
-static OrgGnomeSessionManager *sessionmanager;
-static OrgGnomeScreenSaver *screensaver;
+static IoGithubScarecrow_deSessionManager *sessionmanager;
+static IoGithubScarecrow_deScreenSaver *screensaver;
 static GDBusProxy *client;
 
 typedef enum {
