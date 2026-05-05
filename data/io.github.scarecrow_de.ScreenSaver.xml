@@ -21,11 +21,11 @@
 
 <node name="/" xmlns:doc="http://www.freedesktop.org/dbus/1.0/doc.dtd">
         <!--
-        org.gnome.ScreenSaver:
+        io.github.scarecrow_de.ScreenSaver:
 
         An interface used for managing the lock screen.
         -->
-        <interface name="org.gnome.ScreenSaver">
+        <interface name="io.github.scarecrow_de.ScreenSaver">
                 <method name="Lock" />
                 <method name="GetActive">
                         <arg name="active" direction="out" type="b" />

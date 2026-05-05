@@ -25,7 +25,7 @@
 #include "request.h"
 #include "utils.h"
 
-#define BACKGROUND_SCHEMA "org.gnome.desktop.background"
+#define BACKGROUND_SCHEMA "io.github.scarecrow_de.desktop.background"
 
 typedef struct {
   XdpImplWallpaper *impl;

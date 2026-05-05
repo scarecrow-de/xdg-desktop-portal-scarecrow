@@ -1,14 +1,14 @@
-# Hungarian translation for xdg-desktop-portal-gtk.
+# Hungarian translation for xdg-desktop-portal-scarecrow.
 # Copyright (C) 2016, 2017, 2018, 2019, 2022, 2024, 2025 Free Software Foundation, Inc.
-# This file is distributed under the same license as the xdg-sesktop-portal-gtk package.
+# This file is distributed under the same license as the xdg-sesktop-portal-scarecrow package.
 #
 # Balázs Úr <ur.balazs at fsf dot hu>, 2016, 2017, 2018, 2019, 2022, 2025.
 # Dévényi Benedek <rdbende@proton.me>, 2024.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xdg-desktop-portal-gtk master\n"
-"Report-Msgid-Bugs-To: https://github.com/flatpak/xdg-desktop-portal-gtk/"
+"Project-Id-Version: xdg-desktop-portal-scarecrow master\n"
+"Report-Msgid-Bugs-To: https://github.com/flatpak/xdg-desktop-portal-scarecrow/"
 "issues\n"
 "POT-Creation-Date: 2025-09-10 16:06+0000\n"
 "PO-Revision-Date: 2025-09-10 23:27+0200\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "X-Generator: Lokalize 24.12.3\n"
 
-#: data/xdg-desktop-portal-gtk.desktop.in.in:3
+#: data/xdg-desktop-portal-scarecrow.desktop.in.in:3
 msgid "Portal"
 msgstr "Portál"
 

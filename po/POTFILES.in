@@ -1,5 +1,5 @@
 # List of source files containing translatable strings.
-data/xdg-desktop-portal-gtk.desktop.in.in
+data/xdg-desktop-portal-scarecrow.desktop.in.in
 src/access.c
 src/accountdialog.c
 src/accountdialog.ui

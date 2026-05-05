@@ -1,12 +1,12 @@
-# Belarusian translation for xdg-desktop-portal-gtk.
-# Copyright (C) 2023 xdg-desktop-portal-gtk's COPYRIGHT HOLDER
-# This file is distributed under the same license as the xdg-desktop-portal-gtk package.
+# Belarusian translation for xdg-desktop-portal-scarecrow.
+# Copyright (C) 2023 xdg-desktop-portal-scarecrow's COPYRIGHT HOLDER
+# This file is distributed under the same license as the xdg-desktop-portal-scarecrow package.
 # Yuras Shumovich <shumovichy@gmail.com>, 2022.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xdg-desktop-portal-gtk main\n"
-"Report-Msgid-Bugs-To: https://github.com/flatpak/xdg-desktop-portal-gtk/"
+"Project-Id-Version: xdg-desktop-portal-scarecrow main\n"
+"Report-Msgid-Bugs-To: https://github.com/flatpak/xdg-desktop-portal-scarecrow/"
 "issues\n"
 "POT-Creation-Date: 2023-01-03 15:31+0000\n"
 "PO-Revision-Date: 2023-01-03 23:22+0300\n"
@@ -20,7 +20,7 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#: data/xdg-desktop-portal-gtk.desktop.in.in:4
+#: data/xdg-desktop-portal-scarecrow.desktop.in.in:4
 msgid "Portal"
 msgstr "Партал"
 

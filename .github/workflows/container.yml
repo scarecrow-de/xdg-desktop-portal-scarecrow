@@ -32,8 +32,8 @@ jobs:
         run: |
           ACTOR="${{ github.actor }}"
           OWNER="${{ github.repository_owner }}"
-          image_actor="ghcr.io/${ACTOR,,}/xdg-desktop-portal-gtk:${{ env.IMAGE_TAG }}"
-          image_owner="ghcr.io/${OWNER,,}/xdg-desktop-portal-gtk:${{ env.IMAGE_TAG }}"
+          image_actor="ghcr.io/${ACTOR,,}/xdg-desktop-portal-scarecrow:${{ env.IMAGE_TAG }}"
+          image_owner="ghcr.io/${OWNER,,}/xdg-desktop-portal-scarecrow:${{ env.IMAGE_TAG }}"
 
           if docker manifest inspect "${image_owner}" >/dev/null ; then
             echo "exists=true" >> "$GITHUB_OUTPUT"

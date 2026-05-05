@@ -65,8 +65,8 @@ if gtkwayland_dep.found()
 endif
 
 portal_resources = gnome.compile_resources(
-  'xdg-desktop-portal-gtk-resources',
-  'xdg-desktop-portal-gtk.gresource.xml',
+  'xdg-desktop-portal-scarecrow-resources',
+  'xdg-desktop-portal-scarecrow.gresource.xml',
   c_name: '_xdg_desktop',
   source_dir: '.',
 )
@@ -91,9 +91,9 @@ portal_built_sources += gnome.gdbus_codegen('shell-dbus',
   ],
 )
 
-executable('xdg-desktop-portal-gtk',
+executable('xdg-desktop-portal-scarecrow',
   sources: [
-    'xdg-desktop-portal-gtk.c',
+    'xdg-desktop-portal-scarecrow.c',
     portal_sources,
     portal_built_sources,
   ],

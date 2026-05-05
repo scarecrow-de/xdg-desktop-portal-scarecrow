@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=org.freedesktop.impl.portal.desktop.scarecrow
+Exec=@libexecdir@/xdg-desktop-portal-scarecrow
+SystemdService=xdg-desktop-portal-scarecrow.service

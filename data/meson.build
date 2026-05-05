@@ -18,8 +18,8 @@ fdo_dbus_interfaces = files(
 )
 
 gnome_dbus_interfaces = files(
-  'org.gnome.SessionManager.xml',
-  'org.gnome.ScreenSaver.xml',
+  'io.github.scarecrow_de.SessionManager.xml',
+  'io.github.scarecrow_de.ScreenSaver.xml',
 )
 
 gtk_portal = configuration_data()
@@ -53,8 +53,8 @@ else
 endif
 
 configure_file(
-  input: 'gtk.portal.in',
-  output: 'gtk.portal',
+  input: 'scarecrow.portal.in',
+  output: 'scarecrow.portal',
   configuration: gtk_portal,
   install: true,
   install_dir: datadir / 'xdg-desktop-portal/portals',
@@ -63,15 +63,15 @@ configure_file(
 service_conf = configuration_data()
 service_conf.set('libexecdir', libexecdir)
 configure_file(
-  input: 'org.freedesktop.impl.portal.desktop.gtk.service.in',
-  output: 'org.freedesktop.impl.portal.desktop.gtk.service',
+  input: 'org.freedesktop.impl.portal.desktop.scarecrow.service.in',
+  output: 'org.freedesktop.impl.portal.desktop.scarecrow.service',
   configuration: service_conf,
   install: true,
   install_dir: dbus_service_dir,
 )
 configure_file(
-  input: 'xdg-desktop-portal-gtk.service.in',
-  output: 'xdg-desktop-portal-gtk.service',
+  input: 'xdg-desktop-portal-scarecrow.service.in',
+  output: 'xdg-desktop-portal-scarecrow.service',
   configuration: service_conf,
   install: true,
   install_dir: systemd_userunit_dir,
@@ -82,11 +82,11 @@ desktop_conf.set('libexecdir', libexecdir)
 i18n.merge_file(
   type: 'desktop',
   input: configure_file(
-    input: 'xdg-desktop-portal-gtk.desktop.in.in',
-    output: 'xdg-desktop-portal-gtk.desktop.in',
+    input: 'xdg-desktop-portal-scarecrow.desktop.in.in',
+    output: 'xdg-desktop-portal-scarecrow.desktop.in',
     configuration: desktop_conf,
   ),
-  output: 'xdg-desktop-portal-gtk.desktop',
+  output: 'xdg-desktop-portal-scarecrow.desktop',
   po_dir: '../po',
   install: true,
   install_dir: datadir / 'applications',

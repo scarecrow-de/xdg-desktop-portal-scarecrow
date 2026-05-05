@@ -1,11 +1,11 @@
-# Galician translation for xdg-desktop-portal-gtk.
-# Copyright (C) 2017 xdg-desktop-portal-gtk's COPYRIGHT HOLDER
-# This file is distributed under the same license as the xdg-desktop-portal-gtk package.
+# Galician translation for xdg-desktop-portal-scarecrow.
+# Copyright (C) 2017 xdg-desktop-portal-scarecrow's COPYRIGHT HOLDER
+# This file is distributed under the same license as the xdg-desktop-portal-scarecrow package.
 # Fran Dieguez <frandieguez@gnome.org>, 2017, 2019.
 msgid ""
 msgstr ""
-"Project-Id-Version: xdg-desktop-portal-gtk master\n"
-"Report-Msgid-Bugs-To: https://github.com/flatpak/xdg-desktop-portal-gtk/"
+"Project-Id-Version: xdg-desktop-portal-scarecrow master\n"
+"Report-Msgid-Bugs-To: https://github.com/flatpak/xdg-desktop-portal-scarecrow/"
 "issues\n"
 "POT-Creation-Date: 2022-11-30 03:33+0000\n"
 "PO-Revision-Date: 2023-02-08 21:12+0100\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#: data/xdg-desktop-portal-gtk.desktop.in.in:4
+#: data/xdg-desktop-portal-scarecrow.desktop.in.in:4
 msgid "Portal"
 msgstr "Portal"
 

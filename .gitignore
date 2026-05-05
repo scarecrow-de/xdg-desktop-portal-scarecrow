@@ -16,7 +16,7 @@ aclocal.m4
 autom4te.cache
 compile
 *.service
-xdg-desktop-portal-gtk
+xdg-desktop-portal-scarecrow
 .dirstamp
 xdg-desktop-portal-dbus.[ch]
 /ABOUT-NLS
@@ -38,4 +38,4 @@ xdg-desktop-portal-dbus.[ch]
 /testappchooser
 /xdg-desktop-portal-*.tar.xz
 /xdg-desktop-portal-*/
-/xdg-desktop-portal-gtk.desktop
+/xdg-desktop-portal-scarecrow.desktop

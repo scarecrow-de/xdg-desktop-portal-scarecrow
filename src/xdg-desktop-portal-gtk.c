@@ -236,13 +236,13 @@ main (int argc, char *argv[])
   g_option_context_set_summary (context,
       "A backend implementation for xdg-desktop-portal.");
   g_option_context_set_description (context,
-      "xdg-desktop-portal-gtk provides D-Bus interfaces that\n"
+      "xdg-desktop-portal-scarecrow provides D-Bus interfaces that\n"
       "are used by xdg-desktop-portal to implement portals\n"
       "\n"
       "Documentation for the available D-Bus interfaces can be found at\n"
       "https://flatpak.github.io/xdg-desktop-portal/docs/\n"
       "\n"
-      "Please report issues at https://github.com/flatpak/xdg-desktop-portal-gtk/issues");
+      "Please report issues at https://github.com/flatpak/xdg-desktop-portal-scarecrow/issues");
   g_option_context_add_main_entries (context, entries, NULL);
   if (!g_option_context_parse (context, &argc, &argv, &error))
     {
@@ -265,7 +265,7 @@ main (int argc, char *argv[])
   if (opt_verbose)
     g_log_set_handler (NULL, G_LOG_LEVEL_DEBUG, message_handler, NULL);
 
-  g_set_prgname ("xdg-desktop-portal-gtk");
+  g_set_prgname ("xdg-desktop-portal-scarecrow");
 
   loop = g_main_loop_new (NULL, FALSE);
 

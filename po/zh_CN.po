@@ -1,6 +1,6 @@
-# Chinese (China) translation for xdg-desktop-portal-gtk.
-# Copyright (C) 2016 xdg-desktop-portal-gtk's COPYRIGHT HOLDER
-# This file is distributed under the same license as the xdg-desktop-portal-gtk package.
+# Chinese (China) translation for xdg-desktop-portal-scarecrow.
+# Copyright (C) 2016 xdg-desktop-portal-scarecrow's COPYRIGHT HOLDER
+# This file is distributed under the same license as the xdg-desktop-portal-scarecrow package.
 # Mingye Wang <arthur2e5@aosc.xyz>, 2016.
 # 王滋涵 Zephyr Waitzman <i@wi24rd.ml>, 2019.
 # Dingzhong Chen <wsxy162@gmail.com>, 2020.
@@ -8,8 +8,8 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xdg-desktop-portal-gtk master\n"
-"Report-Msgid-Bugs-To: https://github.com/flatpak/xdg-desktop-portal-gtk/"
+"Project-Id-Version: xdg-desktop-portal-scarecrow master\n"
+"Report-Msgid-Bugs-To: https://github.com/flatpak/xdg-desktop-portal-scarecrow/"
 "issues\n"
 "POT-Creation-Date: 2023-03-04 13:38+0000\n"
 "PO-Revision-Date: 2023-05-27 09:50+0800\n"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Generator: Gtranslator 42.0\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
-#: data/xdg-desktop-portal-gtk.desktop.in.in:4
+#: data/xdg-desktop-portal-scarecrow.desktop.in.in:4
 msgid "Portal"
 msgstr "门户"
 

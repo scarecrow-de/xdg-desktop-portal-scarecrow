@@ -34,18 +34,18 @@ jobs:
           git config --global --add safe.directory $GITHUB_WORKSPACE
           echo XDG_DATA_DIRS=$GITHUB_WORKSPACE/tests/share:/usr/local/share:/usr/share | tee -a $GITHUB_ENV
 
-      - name: Check out xdg-desktop-portal-gtk
+      - name: Check out xdg-desktop-portal-scarecrow
         uses: actions/checkout@v4
 
-      - name: Build xdg-desktop-portal-gtk
+      - name: Build xdg-desktop-portal-scarecrow
         run: |
           meson setup _build
           meson compile -C _build
 
-      - name: Run xdg-desktop-portal-gtk tests
+      - name: Run xdg-desktop-portal-scarecrow tests
         run: timeout --signal=KILL -v ${TESTS_TIMEOUT}m meson test -C _build
 
-      - name: Install xdg-desktop-portal-gtk
+      - name: Install xdg-desktop-portal-scarecrow
         run: meson install -C _build
 
       - name: Create dist tarball

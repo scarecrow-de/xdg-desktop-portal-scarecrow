@@ -45,18 +45,18 @@ lockdown_init (GDBusConnection *bus,
 
   helper = G_DBUS_INTERFACE_SKELETON (xdp_impl_lockdown_skeleton_new ());
 
-  lockdown = g_settings_new ("org.gnome.desktop.lockdown");
+  lockdown = g_settings_new ("io.github.scarecrow_de.desktop.lockdown");
   g_settings_bind (lockdown, "disable-printing", helper, "disable-printing", G_SETTINGS_BIND_DEFAULT);
   g_settings_bind (lockdown, "disable-save-to-disk", helper, "disable-save-to-disk", G_SETTINGS_BIND_DEFAULT);
   g_settings_bind (lockdown, "disable-application-handlers", helper, "disable-application-handlers", G_SETTINGS_BIND_DEFAULT);
 
-  location = g_settings_new ("org.gnome.system.location");
+  location = g_settings_new ("io.github.scarecrow_de.system.location");
   g_settings_bind (location, "enabled", helper, "disable-location", G_SETTINGS_BIND_INVERT_BOOLEAN);
 
   source = g_settings_schema_source_get_default ();
-  schema = g_settings_schema_source_lookup (source, "org.gnome.desktop.privacy", TRUE);
+  schema = g_settings_schema_source_lookup (source, "io.github.scarecrow_de.desktop.privacy", TRUE);
 
-  privacy = g_settings_new ("org.gnome.desktop.privacy");
+  privacy = g_settings_new ("io.github.scarecrow_de.desktop.privacy");
   if (g_settings_schema_has_key (schema, "disable-camera"))
     g_settings_bind (privacy, "disable-camera", helper, "disable-camera", G_SETTINGS_BIND_DEFAULT);
   if (g_settings_schema_has_key (schema, "disable-microphone"))

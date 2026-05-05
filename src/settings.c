@@ -93,7 +93,7 @@ namespace_matches (const char         *namespace,
 static GVariant *
 get_color_scheme (void)
 {
-  SettingsBundle *bundle = g_hash_table_lookup (settings, "org.gnome.desktop.interface");
+  SettingsBundle *bundle = g_hash_table_lookup (settings, "io.github.scarecrow_de.desktop.interface");
   int color_scheme;
 
   if (!g_settings_schema_has_key (bundle->schema, "color-scheme"))
@@ -107,7 +107,7 @@ get_color_scheme (void)
 static GVariant *
 get_contrast_value ()
 {
-  SettingsBundle *bundle = g_hash_table_lookup (settings, "org.gnome.desktop.a11y.interface");
+  SettingsBundle *bundle = g_hash_table_lookup (settings, "io.github.scarecrow_de.desktop.a11y.interface");
   gboolean hc = FALSE;
 
   if (bundle && g_settings_schema_has_key (bundle->schema, "high-contrast"))
@@ -143,7 +143,7 @@ settings_handle_read_all (XdpImplSettings       *object,
       g_variant_dict_init (&dict, NULL);
       for (i = 0; keys[i]; ++i)
         {
-          if (strcmp (key, "org.gnome.desktop.interface") == 0 &&
+          if (strcmp (key, "io.github.scarecrow_de.desktop.interface") == 0 &&
               strcmp (keys[i], "enable-animations") == 0)
             g_variant_dict_insert_value (&dict, keys[i], g_variant_new_boolean (enable_animations));
           else
@@ -153,14 +153,14 @@ settings_handle_read_all (XdpImplSettings       *object,
       g_variant_builder_add (builder, "{s@a{sv}}", key, g_variant_dict_end (&dict));
     }
 
-  if (namespace_matches ("org.gnome.fontconfig", arg_namespaces))
+  if (namespace_matches ("io.github.scarecrow_de.fontconfig", arg_namespaces))
     {
       GVariantDict dict;
 
       g_variant_dict_init (&dict, NULL);
       g_variant_dict_insert_value (&dict, "serial", g_variant_new_int32 (fontconfig_serial));
 
-      g_variant_builder_add (builder, "{s@a{sv}}", "org.gnome.fontconfig", g_variant_dict_end (&dict));
+      g_variant_builder_add (builder, "{s@a{sv}}", "io.github.scarecrow_de.fontconfig", g_variant_dict_end (&dict));
     }
 
   if (namespace_matches ("org.freedesktop.appearance", arg_namespaces))
@@ -190,7 +190,7 @@ settings_handle_read (XdpImplSettings       *object,
 {
   g_debug ("Read %s %s", arg_namespace, arg_key);
 
-  if (strcmp (arg_namespace, "org.gnome.fontconfig") == 0)
+  if (strcmp (arg_namespace, "io.github.scarecrow_de.fontconfig") == 0)
     {
       if (strcmp (arg_key, "serial") == 0)
         {
@@ -214,7 +214,7 @@ settings_handle_read (XdpImplSettings       *object,
 	  return TRUE;
 	}
     }
-  else if (strcmp (arg_namespace, "org.gnome.desktop.interface") == 0 &&
+  else if (strcmp (arg_namespace, "io.github.scarecrow_de.desktop.interface") == 0 &&
            strcmp (arg_key, "enable-animations") == 0)
     {
       g_dbus_method_invocation_return_value (invocation,
@@ -271,7 +271,7 @@ on_settings_changed (GSettings             *settings,
   g_autoptr (GVariant) new_value = g_settings_get_value (settings, key);
 
   g_debug ("Emitting changed for %s %s", user_data->namespace, key);
-  if (strcmp (user_data->namespace, "org.gnome.desktop.interface") == 0 &&
+  if (strcmp (user_data->namespace, "io.github.scarecrow_de.desktop.interface") == 0 &&
       strcmp (key, "enable-animations") == 0)
     sync_animations_enabled (user_data->self);
   else
@@ -279,12 +279,12 @@ on_settings_changed (GSettings             *settings,
                                             user_data->namespace, key,
                                             g_variant_new ("v", new_value));
 
-  if (strcmp (user_data->namespace, "org.gnome.desktop.interface") == 0 &&
+  if (strcmp (user_data->namespace, "io.github.scarecrow_de.desktop.interface") == 0 &&
       strcmp (key, "color-scheme") == 0)
     xdp_impl_settings_emit_setting_changed (user_data->self,
                                             "org.freedesktop.appearance", key,
                                             g_variant_new ("v", get_color_scheme ()));
-  if (strcmp (user_data->namespace, "org.gnome.desktop.a11y.interface") == 0 &&
+  if (strcmp (user_data->namespace, "io.github.scarecrow_de.desktop.a11y.interface") == 0 &&
       strcmp (key, "high-contrast") == 0 &&
       g_variant_is_of_type (new_value, G_VARIANT_TYPE_BOOLEAN))
     {
@@ -301,16 +301,16 @@ init_settings_table (XdpImplSettings *settings,
                      GHashTable      *table)
 {
   static const char * const schemas[] = {
-    "org.gnome.desktop.a11y",
-    "org.gnome.desktop.a11y.interface",
-    "org.gnome.desktop.calendar",
-    "org.gnome.desktop.input-sources",
-    "org.gnome.desktop.interface",
-    "org.gnome.desktop.peripherals.mouse",
-    "org.gnome.desktop.privacy",
-    "org.gnome.desktop.sound",
-    "org.gnome.desktop.wm.preferences",
-    "org.gnome.settings-daemon.plugins.xsettings",
+    "io.github.scarecrow_de.desktop.a11y",
+    "io.github.scarecrow_de.desktop.a11y.interface",
+    "io.github.scarecrow_de.desktop.calendar",
+    "io.github.scarecrow_de.desktop.input-sources",
+    "io.github.scarecrow_de.desktop.interface",
+    "io.github.scarecrow_de.desktop.peripherals.mouse",
+    "io.github.scarecrow_de.desktop.privacy",
+    "io.github.scarecrow_de.desktop.sound",
+    "io.github.scarecrow_de.desktop.wm.preferences",
+    "io.github.scarecrow_de.settings-daemon.plugins.xsettings",
   };
   size_t i;
   GSettingsSchemaSource *source = g_settings_schema_source_get_default ();
@@ -342,7 +342,7 @@ static void
 fontconfig_changed (FcMonitor       *monitor,
                     XdpImplSettings *impl)
 {
-  const char *namespace = "org.gnome.fontconfig";
+  const char *namespace = "io.github.scarecrow_de.fontconfig";
   const char *key = "serial";
 
   g_debug ("Emitting changed for %s %s", namespace, key);
@@ -358,7 +358,7 @@ static void
 set_enable_animations (XdpImplSettings *impl,
                        gboolean         new_enable_animations)
 {
-  const char *namespace = "org.gnome.desktop.interface";
+  const char *namespace = "io.github.scarecrow_de.desktop.interface";
   const char *key = "enable-animations";
   GVariant *enable_animations_variant;
 
@@ -377,7 +377,7 @@ set_enable_animations (XdpImplSettings *impl,
 static void
 sync_animations_enabled (XdpImplSettings *impl)
 {
-  SettingsBundle *bundle = g_hash_table_lookup (settings, "org.gnome.desktop.interface");
+  SettingsBundle *bundle = g_hash_table_lookup (settings, "io.github.scarecrow_de.desktop.interface");
   gboolean new_enable_animations;
 
   new_enable_animations = g_settings_get_boolean (bundle->settings, "enable-animations");

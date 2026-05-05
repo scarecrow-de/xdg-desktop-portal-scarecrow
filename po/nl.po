@@ -1,12 +1,12 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Copyright © 2016 Red Hat
-# This file is distributed under the same license as the xdg-desktop-portal-gtk package.
+# This file is distributed under the same license as the xdg-desktop-portal-scarecrow package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xdg-desktop-portal-gtk 1.8.0\n"
-"Report-Msgid-Bugs-To: https://github.com/flatpak/xdg-desktop-portal-gtk/"
+"Project-Id-Version: xdg-desktop-portal-scarecrow 1.8.0\n"
+"Report-Msgid-Bugs-To: https://github.com/flatpak/xdg-desktop-portal-scarecrow/"
 "issues\n"
 "POT-Creation-Date: 2022-11-29 13:45+0000\n"
 "PO-Revision-Date: 2021-07-17 17:58+0200\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Generator: Poedit 3.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: data/xdg-desktop-portal-gtk.desktop.in.in:4
+#: data/xdg-desktop-portal-scarecrow.desktop.in.in:4
 msgid "Portal"
 msgstr "Portaal"
 

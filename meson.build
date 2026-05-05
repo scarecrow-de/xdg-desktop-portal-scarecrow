@@ -1,5 +1,5 @@
 project(
-  'xdg-desktop-portal-gtk',
+  'xdg-desktop-portal-scarecrow',
   'c',
   version: '1.15.4',
   meson_version: '>= 0.61.2',
@@ -37,7 +37,7 @@ root_inc = include_directories('.')
 
 config_h = configuration_data()
 
-config_h.set_quoted('G_LOG_DOMAIN', 'xdg-desktop-portal-gtk')
+config_h.set_quoted('G_LOG_DOMAIN', 'xdg-desktop-portal-scarecrow')
 config_h.set_quoted('DATADIR', datadir)
 config_h.set_quoted('LIBEXECDIR', libexecdir)
 config_h.set_quoted('LOCALEDIR', localedir)

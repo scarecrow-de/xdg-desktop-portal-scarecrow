@@ -1,14 +1,14 @@
-# Swedish translation for xdg-desktop-portal-gtk.
-# Copyright © 2016-2023 xdg-desktop-portal-gtk's COPYRIGHT HOLDER
-# This file is distributed under the same license as the xdg-desktop-portal-gtk package.
+# Swedish translation for xdg-desktop-portal-scarecrow.
+# Copyright © 2016-2023 xdg-desktop-portal-scarecrow's COPYRIGHT HOLDER
+# This file is distributed under the same license as the xdg-desktop-portal-scarecrow package.
 # Sebastian Rasmussen <sebras@gmail.com>, 2016.
 # Josef Andersson <l10nl18nsweja@gmail.com>, 2017, 2019.
 # Anders Jonsson <anders.jonsson@norsjovallen.se>, 2020, 2023.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xdg-desktop-portal-gtk master\n"
-"Report-Msgid-Bugs-To: https://github.com/flatpak/xdg-desktop-portal-gtk/"
+"Project-Id-Version: xdg-desktop-portal-scarecrow master\n"
+"Report-Msgid-Bugs-To: https://github.com/flatpak/xdg-desktop-portal-scarecrow/"
 "issues\n"
 "POT-Creation-Date: 2023-02-21 03:33+0000\n"
 "PO-Revision-Date: 2023-02-21 11:25+0100\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#: data/xdg-desktop-portal-gtk.desktop.in.in:4
+#: data/xdg-desktop-portal-scarecrow.desktop.in.in:4
 msgid "Portal"
 msgstr "Portal"
 

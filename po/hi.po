@@ -1,6 +1,6 @@
-# Hindi translation for xdg-desktop-portal-gtk.
-# Copyright (C) 2021 xdg-desktop-portal-gtk's COPYRIGHT HOLDER
-# This file is distributed under the same license as the xdg-desktop-portal-gtk package.
+# Hindi translation for xdg-desktop-portal-scarecrow.
+# Copyright (C) 2021 xdg-desktop-portal-scarecrow's COPYRIGHT HOLDER
+# This file is distributed under the same license as the xdg-desktop-portal-scarecrow package.
 # Translators:
 # Dmitry <dmitrydmitry761@gmail.com>, 2021.
 # Hemish <hemish04082005@gmail.com>, 2022.
@@ -8,8 +8,8 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xdg-desktop-portal-gtk master\n"
-"Report-Msgid-Bugs-To: https://github.com/flatpak/xdg-desktop-portal-gtk/"
+"Project-Id-Version: xdg-desktop-portal-scarecrow master\n"
+"Report-Msgid-Bugs-To: https://github.com/flatpak/xdg-desktop-portal-scarecrow/"
 "issues\n"
 "POT-Creation-Date: 2024-05-18 03:33+0000\n"
 "PO-Revision-Date: 2024-05-18 10:05+0530\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Gtranslator 46.1\n"
 
-#: data/xdg-desktop-portal-gtk.desktop.in.in:4
+#: data/xdg-desktop-portal-scarecrow.desktop.in.in:4
 msgid "Portal"
 msgstr "पोर्टल"
 

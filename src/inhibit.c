@@ -566,7 +566,7 @@ inhibit_init (GDBusConnection *bus,
 
   sessionmanager = org_gnome_session_manager_proxy_new_sync (bus,
                                                              G_DBUS_PROXY_FLAGS_DO_NOT_AUTO_START,
-                                                             "org.gnome.SessionManager",
+                                                             "io.github.scarecrow_de.SessionManager",
                                                              "/org/gnome/SessionManager",
                                                              NULL,
                                                              NULL);
@@ -576,7 +576,7 @@ inhibit_init (GDBusConnection *bus,
     {
       screensaver = org_gnome_screen_saver_proxy_new_sync (bus,
                                                            G_DBUS_PROXY_FLAGS_NONE,
-                                                           "org.gnome.ScreenSaver",
+                                                           "io.github.scarecrow_de.ScreenSaver",
                                                            "/org/gnome/ScreenSaver",
                                                            NULL,
                                                            NULL);
@@ -595,8 +595,8 @@ inhibit_init (GDBusConnection *bus,
           org_gnome_screen_saver_call_get_active_sync (screensaver, &active, NULL, NULL);
           g_object_set_data (G_OBJECT (screensaver), "active", GINT_TO_POINTER (active));
 
-          g_debug ("Using org.gnome.SessionManager for inhibit");
-          g_debug ("Using org.gnome.Screensaver for screensaver state");
+          g_debug ("Using io.github.scarecrow_de.SessionManager for inhibit");
+          g_debug ("Using io.github.scarecrow_de.Screensaver for screensaver state");
 
           if (org_gnome_session_manager_call_register_client_sync (sessionmanager,
                                                                    "org.freedesktop.portal",
@@ -607,9 +607,9 @@ inhibit_init (GDBusConnection *bus,
             {
               client = g_dbus_proxy_new_sync (bus, 0,
                                               NULL,
-                                              "org.gnome.SessionManager",
+                                              "io.github.scarecrow_de.SessionManager",
                                               client_path,
-                                              "org.gnome.SessionManager.ClientPrivate",
+                                              "io.github.scarecrow_de.SessionManager.ClientPrivate",
                                               NULL,
                                               NULL);
 
@@ -618,7 +618,7 @@ inhibit_init (GDBusConnection *bus,
                 {
                   g_signal_connect (client, "g-signal", G_CALLBACK (client_proxy_signal), NULL);
 
-                  g_debug ("Using org.gnome.SessionManager for session state");
+                  g_debug ("Using io.github.scarecrow_de.SessionManager for session state");
                 }
             }
         }

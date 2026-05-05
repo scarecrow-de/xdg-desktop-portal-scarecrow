@@ -154,7 +154,7 @@ wallpaper_preview_init (WallpaperPreview *self)
 {
   gtk_widget_init_template (GTK_WIDGET (self));
 
-  self->desktop_settings = g_settings_new ("org.gnome.desktop.interface");
+  self->desktop_settings = g_settings_new ("io.github.scarecrow_de.desktop.interface");
 
   g_signal_connect_object (self->desktop_settings,
                            "changed::clock-format",

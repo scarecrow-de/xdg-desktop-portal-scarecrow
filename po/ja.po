@@ -1,11 +1,11 @@
-# Japanese translations for xdg-desktop-portal-gtk package.
-# Copyright (C) 2024 THE xdg-desktop-portal-gtk'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the xdg-desktop-portal-gtk package.
+# Japanese translations for xdg-desktop-portal-scarecrow package.
+# Copyright (C) 2024 THE xdg-desktop-portal-scarecrow'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the xdg-desktop-portal-scarecrow package.
 # Ryo Nakano <ryonakaknock3@gmail.com>, 2024.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xdg-desktop-portal-gtk\n"
+"Project-Id-Version: xdg-desktop-portal-scarecrow\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-08 19:50+0900\n"
 "PO-Revision-Date: 2024-06-08 20:45+0900\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: data/xdg-desktop-portal-gtk.desktop.in.in:4
+#: data/xdg-desktop-portal-scarecrow.desktop.in.in:4
 msgid "Portal"
 msgstr "ポータル"
 

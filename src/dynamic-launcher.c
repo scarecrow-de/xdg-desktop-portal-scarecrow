@@ -358,6 +358,8 @@ handle_request_install_token (XdpImplDynamicLauncher *object,
    */
   static const char *allowlist[] = {"org.gnome.Software",
                                     "org.gnome.SoftwareDevel",
+                                    "io.github.scarecrow_de.Software",
+                                    "io.github.scarecrow_de.SoftwareDevel",
                                     "io.elementary.appcenter",
                                     "org.kde.discover",
                                     NULL };
