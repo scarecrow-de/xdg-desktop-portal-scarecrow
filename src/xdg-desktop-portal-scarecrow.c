@@ -203,7 +203,7 @@ on_name_acquired (GDBusConnection *connection,
                   const gchar     *name,
                   gpointer         user_data)
 {
-  g_debug ("org.freedesktop.impl.portal.desktop.gtk acquired");
+  g_debug ("org.freedesktop.impl.portal.desktop.scarecrow acquired");
 }
 
 static void
@@ -279,7 +279,7 @@ main (int argc, char *argv[])
     }
 
   owner_id = g_bus_own_name (G_BUS_TYPE_SESSION,
-                             "org.freedesktop.impl.portal.desktop.gtk",
+                             "org.freedesktop.impl.portal.desktop.scarecrow",
                              G_BUS_NAME_OWNER_FLAGS_ALLOW_REPLACEMENT | (opt_replace ? G_BUS_NAME_OWNER_FLAGS_REPLACE : 0),
                              on_bus_acquired,
                              on_name_acquired,
