@@ -44,7 +44,7 @@ uninhibit_done_gnome (GObject *source,
 {
   g_autoptr(GError) error = NULL;
 
-  if (!org_gnome_session_manager_call_uninhibit_finish (sessionmanager, result, &error))
+  if (!io_github_scarecrow_de_session_manager_call_uninhibit_finish (sessionmanager, result, &error))
     g_warning ("Backend call failed: %s", error->message);
 }
 
@@ -61,7 +61,7 @@ handle_close_gnome (XdpImplRequest *object,
    */
   cookie = GPOINTER_TO_UINT (g_object_get_data (G_OBJECT (request), "cookie"));
   if (cookie)
-    org_gnome_session_manager_call_uninhibit (sessionmanager, cookie, NULL, uninhibit_done_gnome, NULL);
+    io_github_scarecrow_de_session_manager_call_uninhibit (sessionmanager, cookie, NULL, uninhibit_done_gnome, NULL);
   else
     g_object_set_data (G_OBJECT (request), "closed", GINT_TO_POINTER (1));
 
@@ -83,13 +83,13 @@ inhibit_done_gnome (GObject *source,
   gboolean closed;
   g_autoptr(GError) error = NULL;
 
-  if (!org_gnome_session_manager_call_inhibit_finish (sessionmanager, &cookie, result, &error))
+  if (!io_github_scarecrow_de_session_manager_call_inhibit_finish (sessionmanager, &cookie, result, &error))
     g_warning ("Backend call failed: %s", error->message);
 
   closed = GPOINTER_TO_UINT (g_object_get_data (G_OBJECT (request), "closed"));
 
   if (closed)
-    org_gnome_session_manager_call_uninhibit (sessionmanager, cookie, NULL, uninhibit_done_gnome, NULL);
+    io_github_scarecrow_de_session_manager_call_uninhibit (sessionmanager, cookie, NULL, uninhibit_done_gnome, NULL);
   else
     g_object_set_data (G_OBJECT (request), "cookie", GUINT_TO_POINTER (cookie));
 }
@@ -119,7 +119,7 @@ handle_inhibit_gnome (XdpImplInhibit *object,
   if (!g_variant_lookup (arg_options, "reason", "&s", &reason))
     reason = "";
 
-  org_gnome_session_manager_call_inhibit (sessionmanager,
+  io_github_scarecrow_de_session_manager_call_inhibit (sessionmanager,
                                           arg_app_id,
                                           0, /* window */
                                           reason,
@@ -564,7 +564,7 @@ inhibit_init (GDBusConnection *bus,
 
   inhibit = G_DBUS_INTERFACE_SKELETON (xdp_impl_inhibit_skeleton_new ());
 
-  sessionmanager = org_gnome_session_manager_proxy_new_sync (bus,
+  sessionmanager = io_github_scarecrow_de_session_manager_proxy_new_sync (bus,
                                                              G_DBUS_PROXY_FLAGS_DO_NOT_AUTO_START,
                                                              "io.github.scarecrow_de.SessionManager",
                                                              "/org/gnome/SessionManager",
@@ -574,7 +574,7 @@ inhibit_init (GDBusConnection *bus,
 
   if (owner)
     {
-      screensaver = org_gnome_screen_saver_proxy_new_sync (bus,
+      screensaver = io_github_scarecrow_de_screen_saver_proxy_new_sync (bus,
                                                            G_DBUS_PROXY_FLAGS_NONE,
                                                            "io.github.scarecrow_de.ScreenSaver",
                                                            "/org/gnome/ScreenSaver",
@@ -592,13 +592,13 @@ inhibit_init (GDBusConnection *bus,
           g_signal_connect (inhibit, "handle-query-end-response", G_CALLBACK (handle_query_end_response), NULL);
 
           g_signal_connect (screensaver, "active-changed", G_CALLBACK (global_active_changed_cb), NULL);
-          org_gnome_screen_saver_call_get_active_sync (screensaver, &active, NULL, NULL);
+          io_github_scarecrow_de_screen_saver_call_get_active_sync (screensaver, &active, NULL, NULL);
           g_object_set_data (G_OBJECT (screensaver), "active", GINT_TO_POINTER (active));
 
           g_debug ("Using io.github.scarecrow_de.SessionManager for inhibit");
           g_debug ("Using io.github.scarecrow_de.Screensaver for screensaver state");
 
-          if (org_gnome_session_manager_call_register_client_sync (sessionmanager,
+          if (io_github_scarecrow_de_session_manager_call_register_client_sync (sessionmanager,
                                                                    "org.freedesktop.portal",
                                                                    "",
                                                                    &client_path,
