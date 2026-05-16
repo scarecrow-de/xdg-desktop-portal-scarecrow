@@ -21,7 +21,7 @@ portal_c_args = [
 ]
 
 if get_option('wallpaper').allowed()
-  portal_deps += dependency('gnome-desktop-3.0')
+  portal_deps += dependency('scarecrow-desktop-3.0')
   portal_sources += files(
     'wallpaper.c',
     'wallpaperpreview.c',

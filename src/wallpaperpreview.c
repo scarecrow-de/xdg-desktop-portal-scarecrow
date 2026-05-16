@@ -29,7 +29,7 @@
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
 #define GNOME_DESKTOP_USE_UNSTABLE_API
-#include <libgnome-desktop/gnome-bg.h>
+#include <libscarecrow-desktop/scarecrow-bg.h>
 
 #include "wallpaperpreview.h"
 

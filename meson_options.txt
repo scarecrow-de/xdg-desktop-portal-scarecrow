@@ -15,7 +15,7 @@ option('datarootdir',
 option('wallpaper',
        type: 'feature',
        value: 'auto',
-       description: 'Enable Wallpaper portal (requires: gnome-desktop)')
+       description: 'Enable Wallpaper portal (requires: scarecrow-desktop)')
 option('settings',
        type: 'feature',
        value: 'auto',
