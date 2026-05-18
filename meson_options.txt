@@ -19,7 +19,7 @@ option('wallpaper',
 option('settings',
        type: 'feature',
        value: 'auto',
-       description: 'Enable Settings portal (requires: fontconfig, gsettings-desktop-schemas)')
+       description: 'Enable Settings portal (requires: fontconfig, scarecrow-gsettings-desktop-schemas)')
 option('appchooser',
        type: 'feature',
        value: 'auto',

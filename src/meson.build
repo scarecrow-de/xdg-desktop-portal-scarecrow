@@ -32,7 +32,7 @@ endif
 
 if get_option('settings').allowed()
   portal_deps += [
-    dependency('gsettings-desktop-schemas'),
+    dependency('scarecrow-gsettings-desktop-schemas'),
     dependency('fontconfig'),
   ]
   portal_sources += files(
