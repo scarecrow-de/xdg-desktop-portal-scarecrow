@@ -14,7 +14,7 @@
 
 #include <glib/gi18n.h>
 #include <gio/gdesktopappinfo.h>
-#include <gdesktop-enums.h>
+#include <scdesktop-enums.h>
 
 #include "xdg-desktop-portal-dbus.h"
 #include "shell-dbus.h"
